@@ -1,32 +1,17 @@
-menu_commands = {
-    '1': 'Start Game',
-    '2': 'Load Game',
-    '3': 'Settings',
-    '4': 'Exit'
-}
+while True:
+    print("\nМеню:")
+    print("1 - Сказать крокодилобомбордиро")
+    print("2 - Показать число 67")
+    print("0 - Выход")
 
+    choice = input("Выбери действие: ")
 
-def display_menu():
-    print("Menu:")
-    for key, value in menu_commands.items():
-        print(f"{key}: {value}")
-
-
-def handle_choice(choice):
-    if choice in menu_commands:
-        print(f"You selected: {menu_commands[choice]}")
+    if choice == "1":
+        print("крокодилобомбордиро!")
+    elif choice == "2":
+        print("Число:", 67)
+    elif choice == "0":
+        print("Выход из программы...")
+        break
     else:
-        print("Invalid choice. Please try again.")
-
-
-def main():
-    while True:
-        display_menu()
-        user_choice = input("Please enter your choice: ")
-        handle_choice(user_choice)
-        if user_choice == '4':
-            break
-
-
-if __name__ == '__main__':
-    main()
+        print("Неверный выбор, попробуй снова")
